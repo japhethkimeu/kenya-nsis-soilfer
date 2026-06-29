@@ -1,12 +1,10 @@
 # NSID Kenya — National Soil Information and Data Portal
 
-[![SoilFER Project](https://img.shields.io/badge/SoilFER-GCP%2FGLO%2F1127%2FUSA-00AEEF)](https://www.fao.org/soilfer)
 [![GeoNode](https://img.shields.io/badge/Powered%20by-GeoNode%205-6B3A1F)](https://geonode.org)
 [![KALRO](https://img.shields.io/badge/Hosted%20at-KALRO%2FNARL-2E7D32)](https://www.kalro.org)
 
 Kenya's digital infrastructure for standardized, reliable, and accessible spatial soil data — from legacy surveys to machine-learning digital soil maps.
 
-> **SoilFER Project** · GCP/GLO/1127/USA · Implemented by FAO · Funded by U.S. Department of State / USAID  
 > Anchored at the National Agricultural Research Laboratories (NARL), KALRO, Kabete
 
 ---
@@ -223,7 +221,7 @@ cd frontend && npm run build
 | **KALRO / NARL** | Host institution, data custodian |
 | **FAO** | Technical implementation |
 | **MoALD Kenya** | Government mandate |
-| **USAID / U.S. Dept. of State** | Funding |
+| **U.S. Department of State** | Funding |
 
 ---
 
