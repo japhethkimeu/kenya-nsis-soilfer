@@ -1,0 +1,104 @@
+version: '3.9'
+
+# NSID Kenya — SoilFER GeoNode Stack
+# Usage:
+#   Development : docker-compose up -d
+#   Production  : set DOCKER_ENV=production in .env, then docker-compose up -d
+
+services:
+
+  # ── PostgreSQL + PostGIS ────────────────────────────────────────────────────
+  db:
+    image: geonode/postgis:15
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U geonode"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── GeoServer ───────────────────────────────────────────────────────────────
+  geoserver:
+    image: geonode/geoserver:2.23.2
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - geoserver-data:/geoserver_data/data
+      - statics:/mnt/volumes/statics
+    ports:
+      - "8080:8080"
+
+  # ── Django / GeoNode ────────────────────────────────────────────────────────
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=nsis_kenya.settings
+      - IS_CELERY=false
+    depends_on:
+      db:
+        condition: service_healthy
+      geoserver:
+        condition: service_started
+    volumes:
+      - statics:/mnt/volumes/statics
+      - uploaded:/mnt/volumes/uploaded
+      - tmp:/tmp
+    ports:
+      - "8000:8000"
+
+  # ── Celery worker ───────────────────────────────────────────────────────────
+  celery:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=nsis_kenya.settings
+      - IS_CELERY=true
+    depends_on:
+      - django
+      - redis
+    volumes:
+      - statics:/mnt/volumes/statics
+      - uploaded:/mnt/volumes/uploaded
+
+  # ── Redis (Celery broker — GeoNode 5) ───────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+
+  # ── Nginx reverse proxy ─────────────────────────────────────────────────────
+  geonode:
+    image: geonode/nginx:1.25.5
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - django
+      - geoserver
+    volumes:
+      - statics:/mnt/volumes/statics
+      - uploaded:/mnt/volumes/uploaded
+    ports:
+      - "80:80"
+      - "443:443"
+
+volumes:
+  db-data:
+  geoserver-data:
+  statics:
+  uploaded:
+  tmp:
+  redis-data:

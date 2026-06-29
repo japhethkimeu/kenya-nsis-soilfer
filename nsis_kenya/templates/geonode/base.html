@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="National Soil Information and Data Portal — Kenya | SoilFER Project" />
+  <title>{% block title %}NSID Kenya | National Soil Information and Data Portal{% endblock %}</title>
+
+  {# Favicon #}
+  <link rel="icon" type="image/png" href="{% static 'nsis_kenya/assets/kenya-govt.png' %}" />
+
+  {# Google Fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  {# Vite-compiled React CSS (injected after `npm run build`) #}
+  {% block head_css %}
+  <link rel="stylesheet" href="{% static 'nsis_kenya/js/index.css' %}" />
+  {% endblock %}
+
+  {# GeoNode's own CSS — kept for admin/catalogue pages #}
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  {#
+    The React app mounts at #root and handles:
+    - Navbar (with partner strip + dropdowns)
+    - Hero / landing page sections
+    - Footer
+
+    GeoNode catalogue, map viewer, admin — rendered below #root
+    using Django templates from blocks, styled to match the NSID theme.
+  #}
+
+  <div id="root">
+    {# React SPA renders here on all NSID pages #}
+  </div>
+
+  {# GeoNode page-specific content (catalogue, upload, map viewer, etc.) #}
+  {% block body %}{% endblock %}
+
+  {# Vite-compiled React bundle #}
+  {% block body_js %}
+  <script type="module" src="{% static 'nsis_kenya/js/index.js' %}"></script>
+  {% endblock %}
+
+  {% block extra_body %}{% endblock %}
+</body>
+</html>
