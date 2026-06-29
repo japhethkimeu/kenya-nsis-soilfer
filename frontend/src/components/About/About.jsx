@@ -100,7 +100,6 @@ export default function About() {
               <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-brown)', color: 'white' }}>FAO</span>
               <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-amber)', color: 'white' }}>U.S. Dept. of State</span>
             </div>
-            </div>
           </div>
         </div>
 
