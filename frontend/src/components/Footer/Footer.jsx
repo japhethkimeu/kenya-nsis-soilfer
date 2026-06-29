@@ -102,8 +102,8 @@ export default function Footer() {
             <img src={`${BASE}/assets/FAO.png`}        alt="FAO"               className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity brightness-0 invert" />
             <div className="ml-auto flex items-center gap-6">
               <span className="text-xs text-gray-600">Funded by</span>
-              <img src={`${BASE}/assets/usa.png`}       alt="USA"               className="h-7 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-              <img src={`${BASE}/assets/dept-state.png`} alt="U.S. Dept. of State" className="h-9 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={`${BASE}/assets/usa.png`}        alt="USA"                      className="h-7 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+              <img src={`${BASE}/assets/dept-state.png`} alt="U.S. Department of State" className="h-9 object-contain opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-gray-600 text-xs">
-            © {new Date().getFullYear()} NSID Kenya · SoilFER Project GCP/GLO/1127/USA ·
+            © {new Date().getFullYear()} NSID Kenya · SoilFER Project ·
             Powered by <a href="https://geonode.org" className="hover:text-gray-400 underline">GeoNode</a>
           </p>
           <div className="flex gap-4">

@@ -1,6 +1,5 @@
 """
 NSIS Kenya — GeoNode Custom Settings
-SoilFER Project GCP/GLO/1127/USA
 
 Extends GeoNode's default settings. Override values for KALRO/NARL deployment.
 """

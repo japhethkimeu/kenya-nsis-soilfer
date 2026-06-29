@@ -49,7 +49,7 @@ export default function About() {
               The <strong>National Soil Information and Data (NSID) portal</strong> addresses
               the fragmentation of Kenya's soil data across institutions — establishing an
               integrated, dynamic platform anchored at KALRO/NARL, Kabete, under the
-              SoilFER Project implemented by FAO and funded by USAID.
+              SoilFER Project implemented by FAO.
             </p>
             <Link to="/about/nsid" className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold" style={{ color: 'var(--soil-brown)' }}>
               Full NSID overview <ArrowRight size={14} />
@@ -92,33 +92,14 @@ export default function About() {
             <div className="eyebrow mb-3">Partners</div>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Designed and implemented through collaboration between the Ministry of Agriculture
-              and Livestock Development, KALRO/NARL, and FAO, funded by USAID.
+              and Livestock Development, KALRO/NARL, and FAO, funded by the U.S. Department of State.
             </p>
             <div className="flex items-center gap-4">
-              <span
-                className="text-xs font-semibold px-2 py-1 rounded-sm"
-                style={{ background: 'var(--soil-cyan)', color: 'white' }}
-              >
-                MoALD
-              </span>
-              <span
-                className="text-xs font-semibold px-2 py-1 rounded-sm"
-                style={{ background: 'var(--soil-green)', color: 'white' }}
-              >
-                KALRO
-              </span>
-              <span
-                className="text-xs font-semibold px-2 py-1 rounded-sm"
-                style={{ background: 'var(--soil-brown)', color: 'white' }}
-              >
-                FAO
-              </span>
-              <span
-                className="text-xs font-semibold px-2 py-1 rounded-sm"
-                style={{ background: 'var(--soil-amber)', color: 'white' }}
-              >
-                USAID
-              </span>
+              <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-cyan)', color: 'white' }}>MoALD</span>
+              <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-green)', color: 'white' }}>KALRO</span>
+              <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-brown)', color: 'white' }}>FAO</span>
+              <span className="text-xs font-semibold px-2 py-1 rounded-sm" style={{ background: 'var(--soil-amber)', color: 'white' }}>U.S. Dept. of State</span>
+            </div>
             </div>
           </div>
         </div>

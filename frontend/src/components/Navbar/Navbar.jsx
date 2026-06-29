@@ -85,7 +85,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <span className="text-xs text-gray-400 tracking-wide">Funded by</span>
             <img src={assets.usa}       alt="USA"                className="h-6 object-contain" />
-            <img src={assets.deptState} alt="U.S. Dept of State" className="h-7 object-contain" />
+            <img src={assets.deptState} alt="U.S. Department of State" className="h-7 object-contain" />
           </div>
         </div>
       </div>
