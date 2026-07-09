@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+{% load static %}
+{% block header %}
+    {% include 'geonode-mapstore-client/snippets/header.html' with show_hero=False %}
+{% endblock %}
+{% block content %}
+<div class="gn-container" style="max-width:900px; margin:0 auto; padding:40px 20px; line-height:1.7;">
+  <h1 style="font-family:'Poppins',sans-serif; color:#25bce2;">National Soil Information and Data System (NSID)</h1>
+
+  <p>The Government of Kenya, through the Ministry of Agriculture and Livestock Development (MoALD) and its research and technical institutions, is mandated to guide, coordinate, and oversee agricultural development, food security, and sustainable management of natural resources. Sustainable soil management is a critical pillar for improving agricultural productivity, enhancing climate resilience, and supporting a resilient agrifood system.</p>
+
+  <p>To strengthen national capacity in soil data generation, integration, and use, Kenya is establishing the National Soil Information and Data portal (NSID) as a core national digital platform for soil information management.</p>
+
+  <p>NSID is developed under the Soil Mapping for Resilient Agrifood Systems in Central America and Sub-Saharan Africa (SoilFER) Project, implemented with technical leadership from FAO and national partners in Kenya. The system is anchored at the National Agricultural Laboratories (NARL) based at the Food Crops Research Centre (FCRC), Kabete, under the Kenya Agricultural and Livestock Research Organization (KALRO).</p>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Vision</h2>
+  <p>Healthy, fertile, and resilient soil resources that sustainably support Kenya's agrifood systems, livelihoods, and climate resilience.</p>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Mission</h2>
+  <ul>
+    <li>To generate, integrate, and maintain national soil information and digital soil maps for Kenya;</li>
+    <li>To support data-driven soil fertility management, land use planning, and climate-smart agriculture at farm, landscape, and national scales;</li>
+    <li>To strengthen institutional and technical capacity in soil data management, digital soil mapping, and geospatial analysis; and</li>
+    <li>To improve access to actionable soil information and decision-support tools for farmers, extension services, researchers, planners, and policymakers.</li>
+  </ul>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Purpose of NSID</h2>
+  <p>Limited access to harmonized, up-to-date, and spatially detailed soil information remains a major constraint to effective soil management, fertilizer recommendations, land restoration, and climate-resilient agricultural planning in Kenya. Existing soil data are often fragmented across institutions, stored in non-digital formats, or developed using inconsistent standards.</p>
+  <p>The National Soil Information and Data System (NSID) addresses these challenges by establishing an integrated, dynamic, and interactive national soil information platform that enables:</p>
+  <ul>
+    <li>Collation, digitization, and harmonization of soil legacy data from multiple institutions;</li>
+    <li>Integration of newly generated soil survey and laboratory data with existing datasets;</li>
+    <li>Development of digital soil maps, including high-resolution soil nutrient and nutrient budget maps;</li>
+    <li>Storage, management, updating, analysis, and dissemination of soil and related land resource data; and</li>
+    <li>Interoperable access to soil information for decision-making, research, investment, and advisory services.</li>
+  </ul>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">System Scope and Capabilities</h2>
+  <p>NSID supports end-to-end soil information workflows, including:</p>
+  <ul>
+    <li>Digital soil mapping based on standardized soil survey data including topsoil and subsoil;</li>
+    <li>Integration of field observations, laboratory analyses, remote sensing, and GIS-based spatial modeling;</li>
+    <li>Development of soil fertility and soil health indicators;</li>
+    <li>Support to Decision Support Systems (DSS) for integrated soil nutrient management;</li>
+    <li>Linkages to farmer-facing applications such as fertilizer and soil management advisory tools (e.g. FerSIS App); and</li>
+    <li>Visualization, querying, and sharing of soil information through web-based geospatial services.</li>
+  </ul>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Role of SoilFER in NSID Development</h2>
+  <p>Under the SoilFER Project, NSID contributes to improving agricultural livelihoods and building resilient agrifood systems by strengthening national knowledge and technical capacity for data-driven integrated soil nutrient management.</p>
+  <p>In Kenya, SoilFER supports the establishment of a fully operational national soil information system, focusing on:</p>
+  <ul>
+    <li>Identification of soil data-holding institutions and existing soil datasets;</li>
+    <li>Digitization and standardization of soil legacy data;</li>
+    <li>Development of harmonized data schemas and formats;</li>
+    <li>Production of updated national and sub-national soil maps; and</li>
+    <li>Capacity building of government institutions in the use of digital soil information and geospatial decision-support tools.</li>
+  </ul>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Data Governance and Access</h2>
+  <p>Data access, use, and sharing within NSID are governed by national policies, institutional agreements, and FAO-supported data governance principles. The system promotes responsible data sharing, interoperability, and transparency while ensuring data quality, security, and appropriate use.</p>
+
+  <h2 style="font-family:'Poppins',sans-serif; color:#7a4b1e;">Partnerships</h2>
+  <p>The design, development, and implementation of NSID are supported through collaboration between the MoALD, KALRO and the National Agricultural Laboratories (NARL), FAO and its technical units; and funded by USAID.</p>
+  <div style="display:flex; gap:30px; align-items:center; margin:20px 0; flex-wrap:wrap;">
+    <img src="{% static 'img/FAO.png' %}" alt="FAO" style="height:45px;">
+    <img src="{% static 'img/kalro.png' %}" alt="KALRO" style="height:55px;">
+    <img src="{% static 'img/kenya-govt.png' %}" alt="Government of Kenya" style="height:50px;">
+    <img src="{% static 'img/usa.png' %}" alt="USAID" style="height:45px;">
+  </div>
+  <p>These partnerships ensure that NSID is technically robust, nationally owned, and aligned with Kenya's agricultural development and climate resilience priorities.</p>
+</div>
+{% endblock %}

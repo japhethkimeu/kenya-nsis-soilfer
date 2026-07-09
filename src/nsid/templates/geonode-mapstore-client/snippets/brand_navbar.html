@@ -1,0 +1,16 @@
+{% extends "geonode-mapstore-client/snippets/brand_navbar.html" %}
+{% load static %}
+{% block extra_style %}
+<style>
+#gn-brand-navbar {
+  background-color: #ffffff;
+}
+#gn-brand-navbar img {
+  max-height: 55px;
+  width: auto;
+}
+</style>
+{% endblock %}
+{% block logo_src %}
+{% static 'img/soilfer.png' %}
+{% endblock %}

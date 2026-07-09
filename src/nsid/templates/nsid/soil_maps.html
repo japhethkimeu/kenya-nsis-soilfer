@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block header %}
+    {% include 'geonode-mapstore-client/snippets/header.html' with show_hero=False %}
+{% endblock %}
+{% block content %}
+<div class="gn-container" style="max-width:900px; margin:0 auto; padding:40px 20px; line-height:1.7;">
+  <h1 style="font-family:'Poppins',sans-serif; color:#25bce2;">Soil Maps</h1>
+  <p>Soil maps at different scales for the whole country and/or counties.</p>
+</div>
+{% endblock %}

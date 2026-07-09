@@ -1,0 +1,37 @@
+{% extends "geonode-mapstore-client/snippets/custom_theme.html" %}
+{% load static %}
+{% block content %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital@0;1&display=swap');
+
+.msgapi .gn-theme {
+  --gn-primary: #25bce2;
+  --gn-primary-contrast: #ffffff;
+  --gn-link-color: #e46129;
+  --gn-focus-color: rgba(37, 188, 226, 0.4);
+  --gn-footer-bg: #ffffff;
+  --gn-footer-text-color: #333333;
+  --gn-success: #62b348;
+}
+
+body, .msgapi {
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.gn-hero-description h1,
+#gn-brand-navbar {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary, .btn-primary:hover {
+  background-color: #25bce2 !important;
+  border-color: #25bce2 !important;
+}
+</style>
+{% endblock %}
+<style>
+.gn-footer ul li a {
+  font-size: 16px !important;
+}
+</style>
