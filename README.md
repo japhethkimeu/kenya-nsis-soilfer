@@ -115,22 +115,13 @@ docker exec -it django4nsid sh -c 'SOURCE_URL=$SOURCE_URL TARGET_URL=$TARGET_URL
   git+https://github.com/GeoNode/geonode.git@<branch>
   ```
 
-## Branding Guidelines
-
-This project follows SoilFER partner branding. Notably: **"USAID" must never appear in portal text content** — partner attribution uses "U.S. Department of State."
-
 ## Contributing
 
 Issues and pull requests are welcome. For substantial changes, please open an issue first to discuss what you'd like to change.
 
-## Contact
-
-Japheth Kimeu — Geospatial Technical Advisor, FAO SoilFER Project
-GitHub: [@japhethkimeu](https://github.com/japhethkimeu)
-
 ## License
 
-_Add license (e.g. GPL-3.0, consistent with upstream GeoNode) or state "All rights reserved" if proprietary._
+Licensed under the [GNU General Public License v3.0](LICENSE), consistent with upstream GeoNode.
 
 ## Acknowledgments
 
